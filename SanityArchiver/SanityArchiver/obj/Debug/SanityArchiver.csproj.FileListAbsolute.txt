@@ -1,0 +1,12 @@
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\SanityArchiver.exe.config
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\SanityArchiver.exe
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\SanityArchiver.pdb
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.csprojResolveAssemblyReference.cache
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.Base.resources
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.Properties.Resources.resources
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.csproj.GenerateResource.Cache
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.exe
+c:\users\noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\obj\Debug\SanityArchiver.pdb
+C:\Users\Noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\Ionic.Zlib.dll
+C:\Users\Noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\Ionic.Zlib.pdb
+C:\Users\Noncsi\Desktop\Sheiwa\C#\SanityArchiver\SanityArchiver\bin\Debug\Ionic.Zlib.xml
