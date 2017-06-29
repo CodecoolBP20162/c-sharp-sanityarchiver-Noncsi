@@ -58,19 +58,10 @@
     <Compile Include="Archiver.Designer.cs">
       <DependentUpon>Archiver.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileRenameForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FileRenameForm.Designer.cs">
-      <DependentUpon>FileRenameForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Archiver.resx">
       <DependentUpon>Archiver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileRenameForm.resx">
-      <DependentUpon>FileRenameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

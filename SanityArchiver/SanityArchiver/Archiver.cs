@@ -94,6 +94,7 @@ namespace SanityArchiver
 
         private void RenameButton_Click(object sender, EventArgs e)
         {
+            NewFileNameTextBox.Text = null;
             NewFileNameLabel.Show();
             NewFileNameTextBox.Show();
             NewFileNameOkButton.Show();      
@@ -103,7 +104,11 @@ namespace SanityArchiver
         {
             string oldFilePath = GetSelectedFilesPath();
             string newFilePath = CurrentPath + NewFileNameTextBox.Text;
-            File.Move(oldFilePath, newFilePath);
+            try
+            {
+                File.Move(oldFilePath, newFilePath);
+            } catch { MessageBox.Show("You cannot leave it blank.", "Rename error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            
             RefreshPage();
             NewFileNameLabel.Hide();
             NewFileNameTextBox.Hide();
@@ -137,6 +142,11 @@ namespace SanityArchiver
             EncryptAndDecrypt decrypt = new EncryptAndDecrypt();
             string SelectedFilePath = GetSelectedFilesPath();
             decrypt.DecryptFile(SelectedFilePath);
-        }    
+        }
+
+        private void NewFileNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
 }

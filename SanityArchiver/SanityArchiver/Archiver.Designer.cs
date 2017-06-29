@@ -38,6 +38,7 @@
             this.image = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Extension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DeleteFileButton = new System.Windows.Forms.PictureBox();
             this.EncryptButton = new System.Windows.Forms.PictureBox();
             this.DecryptButton = new System.Windows.Forms.PictureBox();
@@ -124,7 +125,8 @@
             this.Table.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.image,
             this.Name,
-            this.Extension});
+            this.Extension,
+            this.Size});
             this.Table.FullRowSelect = true;
             this.Table.Location = new System.Drawing.Point(12, 47);
             this.Table.Name = "Table";
@@ -143,11 +145,17 @@
             // Name
             // 
             this.Name.Text = "Name";
-            this.Name.Width = 155;
+            this.Name.Width = 181;
             // 
             // Extension
             // 
             this.Extension.Text = "Extension";
+            this.Extension.Width = 68;
+            // 
+            // Size
+            // 
+            this.Size.Text = "Size";
+            this.Size.Width = 199;
             // 
             // DeleteFileButton
             // 
@@ -195,6 +203,7 @@
             this.NewFileNameTextBox.Size = new System.Drawing.Size(223, 20);
             this.NewFileNameTextBox.TabIndex = 16;
             this.NewFileNameTextBox.Visible = false;
+            this.NewFileNameTextBox.TextChanged += new System.EventHandler(this.NewFileNameTextBox_TextChanged);
             // 
             // NewFileNameOkButton
             // 
@@ -266,6 +275,7 @@
         private System.Windows.Forms.TextBox NewFileNameTextBox;
         private System.Windows.Forms.Button NewFileNameOkButton;
         private System.Windows.Forms.Label NewFileNameLabel;
+        private System.Windows.Forms.ColumnHeader Size;
     }
 }
 

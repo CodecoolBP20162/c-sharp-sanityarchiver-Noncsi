@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SanityArchiver
@@ -17,6 +18,7 @@ namespace SanityArchiver
                     list.ImageIndex = 0;
                     list.SubItems.Add(folder.Name);
                     list.SubItems.Add(folder.Extension.ToUpper());
+                    list.SubItems.Add("Nah..Too complex on Thursday 11 PM");
                     Table.Items.Add(list);
                 };
             }
@@ -35,6 +37,17 @@ namespace SanityArchiver
                     list.ImageIndex = 1;
                     list.SubItems.Add(file.Name);
                     list.SubItems.Add(file.Extension.ToUpper());
+                        // Calculate size in a way that simple humans can read it too
+                        string[] sizes = { "B", "KB", "MB", "GB", "TB" };
+                        double len = file.Length;
+                        int order = 0;
+                        while (len >= 1024 && order < sizes.Length - 1)
+                        {
+                            order++;
+                            len = len / 1024;
+                        }
+                        string size = String.Format("{0:0.##} {1}", len, sizes[order]);
+                    list.SubItems.Add(size);
                     Table.Items.Add(list);
                 };
             }
