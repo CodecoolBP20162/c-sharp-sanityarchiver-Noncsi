@@ -92,25 +92,22 @@ namespace SanityArchiver
             RefreshPage();
         }
 
-        void RenameFile()
+        private void RenameButton_Click(object sender, EventArgs e)
         {
-            RenameFileTextBox.Show();
-            ApproveNewFileNameButton.Show();
-            RenameFileLabel.Show();
+            NewFileNameLabel.Show();
+            NewFileNameTextBox.Show();
+            NewFileNameOkButton.Show();      
         }
 
-        private void RenameButton_Click(object sender, EventArgs e)
-        { RenameFile();}
-
-        private void ApproveNewFileNameButton_Click(object sender, EventArgs e)
+        private void NewFileNameOkButton_Click(object sender, EventArgs e)
         {
             string oldFilePath = GetSelectedFilesPath();
-            string newFilePath = CurrentPath + RenameFileTextBox.Text;
+            string newFilePath = CurrentPath + NewFileNameTextBox.Text;
             File.Move(oldFilePath, newFilePath);
-            RenameFileTextBox.Hide();
-            ApproveNewFileNameButton.Hide();
-            RenameFileLabel.Hide();
             RefreshPage();
+            NewFileNameLabel.Hide();
+            NewFileNameTextBox.Hide();
+            NewFileNameOkButton.Hide();
         }
 
         private void OpenFileButton_Click(object sender, EventArgs e)
@@ -127,5 +124,19 @@ namespace SanityArchiver
             FileToDelete.Delete();
             RefreshPage();
         }
-    }
+
+        private void EncryptButton_Click(object sender, EventArgs e)
+        {
+            EncryptAndDecrypt encrypt = new EncryptAndDecrypt();
+            string SelectedFilePath = GetSelectedFilesPath();
+            encrypt.EncryptFile(SelectedFilePath);
+        }
+
+        private void DecryptButton_Click(object sender, EventArgs e)
+        {
+            EncryptAndDecrypt decrypt = new EncryptAndDecrypt();
+            string SelectedFilePath = GetSelectedFilesPath();
+            decrypt.DecryptFile(SelectedFilePath);
+        }    
+    }   
 }

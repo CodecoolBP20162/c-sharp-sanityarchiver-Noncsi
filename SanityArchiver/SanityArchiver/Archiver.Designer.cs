@@ -33,31 +33,35 @@
             this.CompressButton = new System.Windows.Forms.PictureBox();
             this.DecompressButton = new System.Windows.Forms.PictureBox();
             this.RenameButton = new System.Windows.Forms.PictureBox();
-            this.ApproveNewFileNameButton = new System.Windows.Forms.Button();
-            this.RenameFileTextBox = new System.Windows.Forms.TextBox();
-            this.RenameFileLabel = new System.Windows.Forms.Label();
             this.OpenFileButton = new System.Windows.Forms.PictureBox();
             this.Table = new System.Windows.Forms.ListView();
             this.image = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Extension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DeleteFileButton = new System.Windows.Forms.PictureBox();
+            this.EncryptButton = new System.Windows.Forms.PictureBox();
+            this.DecryptButton = new System.Windows.Forms.PictureBox();
+            this.NewFileNameTextBox = new System.Windows.Forms.TextBox();
+            this.NewFileNameOkButton = new System.Windows.Forms.Button();
+            this.NewFileNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StepBackButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CompressButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DecompressButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RenameButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpenFileButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteFileButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EncryptButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DecryptButton)).BeginInit();
             this.SuspendLayout();
             // 
             // StepBackButton
             // 
-            this.StepBackButton.BackColor = System.Drawing.Color.White;
+            this.StepBackButton.BackColor = System.Drawing.Color.Transparent;
             this.StepBackButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.StepBackButton.Image = ((System.Drawing.Image)(resources.GetObject("StepBackButton.Image")));
-            this.StepBackButton.Location = new System.Drawing.Point(12, 39);
+            this.StepBackButton.Location = new System.Drawing.Point(12, 12);
             this.StepBackButton.Name = "StepBackButton";
-            this.StepBackButton.Size = new System.Drawing.Size(34, 29);
+            this.StepBackButton.Size = new System.Drawing.Size(34, 24);
             this.StepBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StepBackButton.TabIndex = 1;
             this.StepBackButton.TabStop = false;
@@ -65,10 +69,10 @@
             // 
             // CompressButton
             // 
-            this.CompressButton.BackColor = System.Drawing.Color.White;
+            this.CompressButton.BackColor = System.Drawing.Color.Transparent;
             this.CompressButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CompressButton.Image = ((System.Drawing.Image)(resources.GetObject("CompressButton.Image")));
-            this.CompressButton.Location = new System.Drawing.Point(52, 39);
+            this.CompressButton.Location = new System.Drawing.Point(79, 9);
             this.CompressButton.Name = "CompressButton";
             this.CompressButton.Size = new System.Drawing.Size(30, 27);
             this.CompressButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,9 +85,9 @@
             this.DecompressButton.BackColor = System.Drawing.Color.Transparent;
             this.DecompressButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DecompressButton.Image = ((System.Drawing.Image)(resources.GetObject("DecompressButton.Image")));
-            this.DecompressButton.Location = new System.Drawing.Point(88, 39);
+            this.DecompressButton.Location = new System.Drawing.Point(115, 9);
             this.DecompressButton.Name = "DecompressButton";
-            this.DecompressButton.Size = new System.Drawing.Size(29, 29);
+            this.DecompressButton.Size = new System.Drawing.Size(29, 27);
             this.DecompressButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DecompressButton.TabIndex = 6;
             this.DecompressButton.TabStop = false;
@@ -94,7 +98,7 @@
             this.RenameButton.BackColor = System.Drawing.Color.Transparent;
             this.RenameButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RenameButton.Image = ((System.Drawing.Image)(resources.GetObject("RenameButton.Image")));
-            this.RenameButton.Location = new System.Drawing.Point(123, 39);
+            this.RenameButton.Location = new System.Drawing.Point(179, 9);
             this.RenameButton.Name = "RenameButton";
             this.RenameButton.Size = new System.Drawing.Size(29, 27);
             this.RenameButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,43 +106,14 @@
             this.RenameButton.TabStop = false;
             this.RenameButton.Click += new System.EventHandler(this.RenameButton_Click);
             // 
-            // ApproveNewFileNameButton
-            // 
-            this.ApproveNewFileNameButton.Location = new System.Drawing.Point(577, 25);
-            this.ApproveNewFileNameButton.Name = "ApproveNewFileNameButton";
-            this.ApproveNewFileNameButton.Size = new System.Drawing.Size(75, 23);
-            this.ApproveNewFileNameButton.TabIndex = 8;
-            this.ApproveNewFileNameButton.Text = "Save";
-            this.ApproveNewFileNameButton.UseVisualStyleBackColor = true;
-            this.ApproveNewFileNameButton.Visible = false;
-            this.ApproveNewFileNameButton.Click += new System.EventHandler(this.ApproveNewFileNameButton_Click);
-            // 
-            // RenameFileTextBox
-            // 
-            this.RenameFileTextBox.Location = new System.Drawing.Point(342, 25);
-            this.RenameFileTextBox.Name = "RenameFileTextBox";
-            this.RenameFileTextBox.Size = new System.Drawing.Size(229, 20);
-            this.RenameFileTextBox.TabIndex = 9;
-            this.RenameFileTextBox.Visible = false;
-            // 
-            // RenameFileLabel
-            // 
-            this.RenameFileLabel.AutoSize = true;
-            this.RenameFileLabel.Location = new System.Drawing.Point(339, 9);
-            this.RenameFileLabel.Name = "RenameFileLabel";
-            this.RenameFileLabel.Size = new System.Drawing.Size(278, 13);
-            this.RenameFileLabel.TabIndex = 10;
-            this.RenameFileLabel.Text = "Rename the selected file. You have to add the extension!";
-            this.RenameFileLabel.Visible = false;
-            // 
             // OpenFileButton
             // 
             this.OpenFileButton.BackColor = System.Drawing.Color.Transparent;
             this.OpenFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OpenFileButton.Image = ((System.Drawing.Image)(resources.GetObject("OpenFileButton.Image")));
-            this.OpenFileButton.Location = new System.Drawing.Point(158, 39);
+            this.OpenFileButton.Location = new System.Drawing.Point(214, 9);
             this.OpenFileButton.Name = "OpenFileButton";
-            this.OpenFileButton.Size = new System.Drawing.Size(41, 25);
+            this.OpenFileButton.Size = new System.Drawing.Size(41, 27);
             this.OpenFileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.OpenFileButton.TabIndex = 11;
             this.OpenFileButton.TabStop = false;
@@ -151,9 +126,9 @@
             this.Name,
             this.Extension});
             this.Table.FullRowSelect = true;
-            this.Table.Location = new System.Drawing.Point(12, 74);
+            this.Table.Location = new System.Drawing.Point(12, 47);
             this.Table.Name = "Table";
-            this.Table.Size = new System.Drawing.Size(640, 684);
+            this.Table.Size = new System.Drawing.Size(640, 675);
             this.Table.TabIndex = 12;
             this.Table.UseCompatibleStateImageBehavior = false;
             this.Table.View = System.Windows.Forms.View.Details;
@@ -179,13 +154,68 @@
             this.DeleteFileButton.BackColor = System.Drawing.Color.Transparent;
             this.DeleteFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeleteFileButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteFileButton.Image")));
-            this.DeleteFileButton.Location = new System.Drawing.Point(205, 39);
+            this.DeleteFileButton.Location = new System.Drawing.Point(628, 9);
             this.DeleteFileButton.Name = "DeleteFileButton";
-            this.DeleteFileButton.Size = new System.Drawing.Size(23, 25);
+            this.DeleteFileButton.Size = new System.Drawing.Size(24, 28);
             this.DeleteFileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DeleteFileButton.TabIndex = 13;
             this.DeleteFileButton.TabStop = false;
             this.DeleteFileButton.Click += new System.EventHandler(this.DeleteFileButton_Click);
+            // 
+            // EncryptButton
+            // 
+            this.EncryptButton.BackColor = System.Drawing.Color.Transparent;
+            this.EncryptButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EncryptButton.Image = ((System.Drawing.Image)(resources.GetObject("EncryptButton.Image")));
+            this.EncryptButton.Location = new System.Drawing.Point(306, 9);
+            this.EncryptButton.Name = "EncryptButton";
+            this.EncryptButton.Size = new System.Drawing.Size(24, 25);
+            this.EncryptButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EncryptButton.TabIndex = 14;
+            this.EncryptButton.TabStop = false;
+            this.EncryptButton.Click += new System.EventHandler(this.EncryptButton_Click);
+            // 
+            // DecryptButton
+            // 
+            this.DecryptButton.BackColor = System.Drawing.Color.Transparent;
+            this.DecryptButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DecryptButton.Image = ((System.Drawing.Image)(resources.GetObject("DecryptButton.Image")));
+            this.DecryptButton.Location = new System.Drawing.Point(336, 9);
+            this.DecryptButton.Name = "DecryptButton";
+            this.DecryptButton.Size = new System.Drawing.Size(24, 25);
+            this.DecryptButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DecryptButton.TabIndex = 15;
+            this.DecryptButton.TabStop = false;
+            this.DecryptButton.Click += new System.EventHandler(this.DecryptButton_Click);
+            // 
+            // NewFileNameTextBox
+            // 
+            this.NewFileNameTextBox.Location = new System.Drawing.Point(336, 733);
+            this.NewFileNameTextBox.Name = "NewFileNameTextBox";
+            this.NewFileNameTextBox.Size = new System.Drawing.Size(223, 20);
+            this.NewFileNameTextBox.TabIndex = 16;
+            this.NewFileNameTextBox.Visible = false;
+            // 
+            // NewFileNameOkButton
+            // 
+            this.NewFileNameOkButton.Location = new System.Drawing.Point(577, 731);
+            this.NewFileNameOkButton.Name = "NewFileNameOkButton";
+            this.NewFileNameOkButton.Size = new System.Drawing.Size(75, 23);
+            this.NewFileNameOkButton.TabIndex = 17;
+            this.NewFileNameOkButton.Text = "Ok";
+            this.NewFileNameOkButton.UseVisualStyleBackColor = true;
+            this.NewFileNameOkButton.Visible = false;
+            this.NewFileNameOkButton.Click += new System.EventHandler(this.NewFileNameOkButton_Click);
+            // 
+            // NewFileNameLabel
+            // 
+            this.NewFileNameLabel.AutoSize = true;
+            this.NewFileNameLabel.Location = new System.Drawing.Point(23, 736);
+            this.NewFileNameLabel.Name = "NewFileNameLabel";
+            this.NewFileNameLabel.Size = new System.Drawing.Size(296, 13);
+            this.NewFileNameLabel.TabIndex = 18;
+            this.NewFileNameLabel.Text = "Write the new name for your file. You must add the extension!";
+            this.NewFileNameLabel.Visible = false;
             // 
             // SanityArchiver
             // 
@@ -193,17 +223,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(664, 770);
+            this.Controls.Add(this.NewFileNameLabel);
+            this.Controls.Add(this.NewFileNameOkButton);
+            this.Controls.Add(this.NewFileNameTextBox);
+            this.Controls.Add(this.DecryptButton);
+            this.Controls.Add(this.EncryptButton);
             this.Controls.Add(this.DeleteFileButton);
             this.Controls.Add(this.Table);
             this.Controls.Add(this.OpenFileButton);
-            this.Controls.Add(this.RenameFileLabel);
-            this.Controls.Add(this.RenameFileTextBox);
-            this.Controls.Add(this.ApproveNewFileNameButton);
             this.Controls.Add(this.RenameButton);
             this.Controls.Add(this.DecompressButton);
             this.Controls.Add(this.CompressButton);
             this.Controls.Add(this.StepBackButton);
-
             this.Text = "Total Catmander";
             this.Load += new System.EventHandler(this.SanityArchiver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StepBackButton)).EndInit();
@@ -212,6 +243,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RenameButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpenFileButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteFileButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EncryptButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DecryptButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,15 +255,17 @@
         private System.Windows.Forms.PictureBox CompressButton;
         private System.Windows.Forms.PictureBox DecompressButton;
         private System.Windows.Forms.PictureBox RenameButton;
-        private System.Windows.Forms.Button ApproveNewFileNameButton;
-        private System.Windows.Forms.TextBox RenameFileTextBox;
-        private System.Windows.Forms.Label RenameFileLabel;
         private System.Windows.Forms.PictureBox OpenFileButton;
         private System.Windows.Forms.ListView Table;
         private System.Windows.Forms.ColumnHeader Name;
         private System.Windows.Forms.ColumnHeader Extension;
         private System.Windows.Forms.ColumnHeader image;
         private System.Windows.Forms.PictureBox DeleteFileButton;
+        private System.Windows.Forms.PictureBox EncryptButton;
+        private System.Windows.Forms.PictureBox DecryptButton;
+        private System.Windows.Forms.TextBox NewFileNameTextBox;
+        private System.Windows.Forms.Button NewFileNameOkButton;
+        private System.Windows.Forms.Label NewFileNameLabel;
     }
 }
 

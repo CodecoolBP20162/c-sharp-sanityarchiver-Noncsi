@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncryptAndDecrypt.cs" />
     <Compile Include="GetFoldersAndFiles.cs" />
     <Compile Include="CompressAndDecompress.cs" />
     <Compile Include="Archiver.cs">
